@@ -12,10 +12,18 @@
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
-    "react-native-web": "^0.11.4"
+    "react-native-web": "^0.11.4",
+    "react-native-elements": "^0.16.0",
+    "react-native-swipeview": "^1.0.1",
+    "react-navigation": "^1.0.0-beta.11",
+    "redux-persist": "^4.9.1",
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.1.1"
+    "babel-preset-expo": "^5.1.1",
+    "react-native-scripts": "1.2.1",
+    "jest-expo": "~20.0.0",
+    "react-test-renderer": "16.0.0-alpha.12"
   },
   "private": true
 }
