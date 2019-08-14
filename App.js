@@ -12,7 +12,7 @@ import AppNavigator from './app/navigation/AppNavigator';
 
 import config from './app/config';
 
-// import * as TodoActionCreators from './redux/actions/TodoActionCreators';
+import * as TodoActionCreators from './redux/actions/TodoActionCreators';
 
 //import * as TodoActionCreators from './redux/actions/TodoActionCreators';
 
@@ -78,6 +78,15 @@ export default function App() {
 
   );
 }
+
+// const mapDispatchToProps = (dispatch) => {
+//   return bindActionCreators(TodoActionCreators, dispatch);
+// };
+
+// const mapStateToProps = (state) => ({
+//   todosReducer: state.todosReducer,
+//   nav: state.nav,
+// });
 
 const styles = StyleSheet.create({
   container: {
