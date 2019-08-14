@@ -4,6 +4,8 @@ import { StyleSheet, Text, View, Image, Button, Platform } from 'react-native';
 import { addNavigationHelpers } from 'react-navigation';
 import AppNavigator from './app/navigation/AppNavigator';
 
+import config from './app/config';
+
 import Title from './app/components/Title'
 import Input from './app/components/Input';
 import TodoRowItem from './app/components/TodoRowItem';
@@ -15,9 +17,24 @@ export default function App() {
   return (
     <View style={styles.container}>
       
-      { Title('config.constants.active_todos_screen.title') }
+      { Title(config.constants.active_todos_screen.title) }
 
       <Text style={{fontSize: 30}}>Yoshi 1</Text>
+
+        <View style={styles.header}>
+          <View style={styles.inputContainer}>
+            <Input
+              placeholder={config.constants.active_todos_screen.add_todo_placeholder}
+              placeholderTextColor={config.colors.white}
+              selectionColor={config.colors.golden}
+              underlineColorAndroid={config.colors.transparent}
+              maxLength={config.constants.active_todos_screen.add_todo_input_maxlength}
+              clearTextOnFocus={config.constants.active_todos_screen.add_todo_input_clear_text_on_focus}
+              //onSubmitEditing={addTodo}
+            />
+          </View>
+          <DateView />
+        </View>
 
       <Image
         style={{width: 300, height: 200}}
