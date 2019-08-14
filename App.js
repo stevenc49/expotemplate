@@ -50,7 +50,7 @@ export default function App() {
               underlineColorAndroid={config.colors.transparent}
               maxLength={config.constants.active_todos_screen.add_todo_input_maxlength}
               clearTextOnFocus={config.constants.active_todos_screen.add_todo_input_clear_text_on_focus}
-              //onSubmitEditing={addTodo}
+              onSubmitEditing={ function() {console.log('on submit') } }
             />
           </View>
           <DateView />
