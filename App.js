@@ -1,7 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button, Platform } from 'react-native';
 
+import { addNavigationHelpers } from 'react-navigation';
+import AppNavigator from './app/navigation/AppNavigator';
 
+import Title from './app/components/Title'
+import Input from './app/components/Input';
+import TodoRowItem from './app/components/TodoRowItem';
+import DateView from './app/components/DateView';
 
 export default function App() {
 
@@ -9,7 +15,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       
-      <Text style={{fontSize: 30}}>Yoshi 3</Text>
+      { Title('config.constants.active_todos_screen.title') }
+
+      <Text style={{fontSize: 30}}>Yoshi 1</Text>
 
       <Image
         style={{width: 300, height: 200}}
@@ -23,6 +31,14 @@ export default function App() {
       />
 
     </View>
+
+    // <View style={{flex: 1, paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight}}>
+    //     <AppNavigator navigation={addNavigationHelpers({
+    //         dispatch: this.props.dispatch,
+    //         state: this.props.nav,
+    //     })} />
+    // </View>
+
   );
 }
 
