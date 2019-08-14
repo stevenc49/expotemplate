@@ -1,5 +1,5 @@
-import config from '../../config';
-import Todo from '../../models/Todo';
+import config from '../../app/config';
+import Todo from '../../app/models/Todo';
 
 const actions = config.todos.actions;
 

@@ -1,10 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button, Platform } from 'react-native';
 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import moment from 'moment';
+import SwipeView from 'react-native-swipeview';
+
 import { addNavigationHelpers } from 'react-navigation';
 import AppNavigator from './app/navigation/AppNavigator';
 
 import config from './app/config';
+
+// import * as TodoActionCreators from './redux/actions/TodoActionCreators';
+
+//import * as TodoActionCreators from './redux/actions/TodoActionCreators';
+
+//import * as TodoActionCreators from '../redux/actions/TodoActionCreators';
 
 import Title from './app/components/Title'
 import Input from './app/components/Input';
@@ -13,13 +25,21 @@ import DateView from './app/components/DateView';
 
 export default function App() {
 
+  // const {todosReducer} = this.props;
+  // const {active} = todosReducer;
+  // const {todos} = active;
+  // const {addTodo, completeTodo, deleteActiveTodo} = this.props;
+
+  // this.leftOpenValue = Dimensions.get('window').width;
+  // this.rightOpenValue = -Dimensions.get('window').width;
+
 
   return (
     <View style={styles.container}>
       
-      { Title(config.constants.active_todos_screen.title) }
-
       <Text style={{fontSize: 30}}>Yoshi 1</Text>
+
+      { Title(config.constants.active_todos_screen.title) }
 
         <View style={styles.header}>
           <View style={styles.inputContainer}>
